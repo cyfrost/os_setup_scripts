@@ -24,13 +24,6 @@ sudo sed -ie "s/^GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)quiet\(.*\)\"/GRUB_CMDLINE_L
 sudo sed -ie "s/^GRUB_CMDLINE_LINUX_DEFAULT=\"\(.*\)splash\(.*\)\"/GRUB_CMDLINE_LINUX_DEFAULT=\"\1\2\"/" /etc/default/grub
 sudo update-grub
 
-# Enable few services
-sudo systemctl enable --now libvirtd
-sudo systemctl enable --now httpd
-sudo systemctl enable --now fstrim.timer
-sudo systemctl enable --now sshd
-sudo systemctl disable --now bluetooth
-
 # Improve GNOME defaults
 gsettings set org.gnome.desktop.calendar show-weekdate true
 gsettings set org.gnome.desktop.datetime automatic-timezone true
@@ -93,6 +86,13 @@ sudo apt update -y --fix-missing;
 
 # Install important packages
 sudo apt install -y gnupg ca-certificates lsb-release apt-transport-https git curl wget build-essential vlc nano vim openssh-server sshpass jq chrome-gnome-shell feh ffmpeg flameshot filezilla python3 python3-pip gnome-tweaks htop hwinfo gtkhash ncdu neofetch nmap qbittorrent remmina xkill tmux tilix guake testdisk thefuck transmission tuned unar unzip mpv gnome-mpv handbrake needrestart shellcheck
+
+# Enable few services
+sudo systemctl enable --now libvirtd
+sudo systemctl enable --now apache2
+sudo systemctl enable --now fstrim.timer
+sudo systemctl enable --now ssh
+sudo systemctl disable --now bluetooth
 
 # Configure Git
 git config --global user.name --replace-all "$gitUsername"
