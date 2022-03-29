@@ -93,6 +93,10 @@ services:
   ```
   - 9.8, make sure you did the above steps right, reboot your router.
 
+```
+IMPORTANT: As discussed in https://old.reddit.com/r/pihole/comments/ooo8po/proper_openwrt_router_setup/, removing the WAN advertised DNS servers forcefully as described in the step 9.4 from above, that will probably prevent OpenWRT from being able to download software updates because it won't be able to get resolved domains. You can skip 9.4 and but the only gripe maybe that devices using private DNS will advertise them to openwrt and it will respect that instead of enforcing pihole, this may result in those devices escaping pihole's adblock capabilities but not a super huge issue unless most of your devices do advertise DNS servers other than the router's own so maybe it's ok to skip 9.4? YMMV
+```
+
 
 ## Post-install best configuration for my pihole setup (adlists, etc)
 
