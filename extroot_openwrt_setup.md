@@ -100,6 +100,7 @@ Also a good idea to setup swapfile, useful for torrenting over the network.
 
 Instructions lifted directly from: https://www.pcsuggest.com/transmission-openwrt-torrent-downloader/
 
+(Additional reading for setting up transmission: https://ptp1.wordpress.com/2015/11/01/running-bittorrent-on-an-openwrt-router/)
 
 Adding swap space may not be necessary for routers with 128 MB or more RAM. Although, due to high memory usage, Transmission performs better when a little swap space is available. In fact on routers with 32 MB of RAM, running the transmission deamon will result in utterly laggy performance, but adding as little as 4 MB of swap space will improve the scenario a lot. You can use a dedicated swap partition on the USB drive or use a swap file, there is no significant performance difference between them. I'm going with the swap file approach here, assuming you are using extroot and have enough free space on the extroot partition.
 
