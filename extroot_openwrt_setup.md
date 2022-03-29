@@ -4,7 +4,6 @@ Prior reading: https://openwrt.org/docs/guide-user/additional-software/extroot_c
 Additional readings:
 1. https://gist.github.com/nikescar/87469582f68a635b596420d2301f34d2
 2. https://www.pcsuggest.com/configuring-extroot-with-openwrt-on-tp-link-mr-3220/
-3. 
 
 Hardware tested on: Archer C7 AC1750 (flashed with OpenWrt 21.02.2 r16495-bf0c965af0 git-22.052.50801-31a27f3)
 Storage & RAM: 32MB storage and 128MB RAM
